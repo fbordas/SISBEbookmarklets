@@ -4,32 +4,44 @@
         <meta charset="utf-8">
         <title>SISBE Bookmarklets</title>
         <style type="text/css">
-            body { text-align: center; }
-            .table { display: table; vertical-align: middle; text-align: center; }
+            .center { text-align: center; }
+            .table { display: table; vertical-align: middle; }
             .table > div { display: inline-block; padding: 5px; width: 48%; vertical-align: middle; }
             .divider { border: 1px solid; border-style: none solid none none; width: 2%!important; }
             h3 { padding: 0; margin: 0; }
+            .i { font-style: italic; }
         </style>
     </head>
     <body>
-        <h2>Para guardar los <span style="font-style:italic">bookmarklets</span>, pinche y arrastre cada enlace a la barra de marcadores/bookmarks</h2>
-        <hr />
-        <div class="table">
-            <div>
-                <h3>
-                    <a href='javascript:(function(){var f=window.frames;while(f.length>0){f=f.frames[0];}var doc=f.document;var checks=Array.from(doc.getElementsByTagName("input")).filter(function(item){return(item.getAttribute("type").toLowerCase()=="checkbox"||item.getAttribute("type").toLowerCase()=="text")&&item.getAttribute("id")!="txtRif";});for(var i=0;i<checks.length;i++){if(checks[i].getAttribute("type").toLowerCase()=="text"){checks[i].value="99999999,99";}else{checks[i].setAttribute("checked","checked");}}})();'>[Módulos] Marcar todo (cotejos y montos)</a><br /><br />
-                    <a href='javascript:(function(){var f=window.frames;while(f.length>0){f=f.frames[0];}var doc=f.document;var checks=Array.from(doc.getElementsByTagName("input")).filter(function(item){return(item.getAttribute("type").toLowerCase()=="checkbox"||item.getAttribute("type").toLowerCase()=="text")&&item.getAttribute("id")!="txtRif";});for(var i=0;i<checks.length;i++){if(checks[i].getAttribute("type").toLowerCase()=="text"){checks[i].value="0,00";}else{checks[i].removeAttribute("checked");}}})();'>[Módulos] Limpiar todo (cotejos y montos)</a><br /><br />
-                    <a href='javascript:(function(){var f=window.frames;while(f.length>0){f=f.frames[0];}var doc=f.document;var cbs=doc.getElementsByTagName("select");for(var i=0;i<cbs.length;i++){cbs[i].selectedIndex=1;}})();'>[Productos] Marcar firmas disponibles</a><br /><br />
-                    <a href='javascript:(function(){var f=window.frames;while(f.length>0){f=f.frames[0];}var doc=f.document;var cbs=doc.getElementsByTagName("select");for(var i=0;i<cbs.length;i++){cbs[i].selectedIndex=0;}})();'>[Productos] Limpiar firmas disponibles</a>
-                </h3>
+        <div class="center">
+            <h2>Para guardar los <span class="i">bookmarklets</span>, pinche y arrastre cada enlace a la barra de marcadores/bookmarks</h2>
+            <hr />
+            <div class="table center">
+                <div>
+                    <h3>
+                        <a href='javascript:(function(){var f=window.frames;while(f.length>0){f=f.frames[0];}var doc=f.document;var checks=Array.from(doc.getElementsByTagName("input")).filter(function(item){return(item.getAttribute("type").toLowerCase()=="checkbox"||item.getAttribute("type").toLowerCase()=="text")&&item.getAttribute("id")!="txtRif";});for(var i=0;i<checks.length;i++){if(checks[i].getAttribute("type").toLowerCase()=="text"){checks[i].value="99999999,99";}else{checks[i].setAttribute("checked","checked");}}})();'>[Módulos] Marcar todo (cotejos y montos)</a><br /><br />
+                        <a href='javascript:(function(){var f=window.frames;while(f.length>0){f=f.frames[0];}var doc=f.document;var checks=Array.from(doc.getElementsByTagName("input")).filter(function(item){return(item.getAttribute("type").toLowerCase()=="checkbox"||item.getAttribute("type").toLowerCase()=="text")&&item.getAttribute("id")!="txtRif";});for(var i=0;i<checks.length;i++){if(checks[i].getAttribute("type").toLowerCase()=="text"){checks[i].value="0,00";}else{checks[i].removeAttribute("checked");}}})();'>[Módulos] Limpiar todo (cotejos y montos)</a><br /><br />
+                        <a href='javascript:(function(){var f=window.frames;while(f.length>0){f=f.frames[0];}var doc=f.document;var cbs=doc.getElementsByTagName("select");for(var i=0;i<cbs.length;i++){cbs[i].selectedIndex=1;}})();'>[Productos] Marcar firmas disponibles</a><br /><br />
+                        <a href='javascript:(function(){var f=window.frames;while(f.length>0){f=f.frames[0];}var doc=f.document;var cbs=doc.getElementsByTagName("select");for(var i=0;i<cbs.length;i++){cbs[i].selectedIndex=0;}})();'>[Productos] Limpiar firmas disponibles</a>
+                    </h3>
+                </div>
+                <div>
+                    <h3>Video demostrativo:</h3>
+                    <video controls="true" autoplay="true" loop="true" muted="true" width="75%" height="75%">
+                        <source src="sisbe.mp4" type="video/mp4">
+                        Su navegador no soporta el elemento de video nativo.
+                    </video>
+                </div>
             </div>
-            <div>
-                <h3>Video demostrativo:</h3>
-                <video controls="true" autoplay="true" loop="true" muted="true" width="75%" height="75%">
-                    <source src="sisbe.mp4" type="video/mp4">
-                    Su navegador no soporta el elemento de video nativo.
-                </video>
-            </div>
+        </div>
+        <div>
+            <br /><br />
+            <h3 class="center">Notas:</h3>
+            <ul>
+                <li>Cada <span class="i">bookmarklet</span> s&oacute;lo funcionar&aacute; en el m&oacute;dulo correspondiente.</li>
+                <li>En el m&oacute;dulo de firmas, se seleccionar&aacute; la primera firma disponible para cada elemento, cualquiera que sea.</li>
+                <li>Si se cambia manualmente un cotejo o una firma, el <span class="i">bookmarklet</span> no tendr&aacute; acceso a ese elemento hasta volver a cargar el m&oacute;dulo.</li>
+            </ul>
         </div>
 </body>
 </html>
