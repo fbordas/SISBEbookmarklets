@@ -4,11 +4,14 @@
         <meta charset="utf-8">
         <title>SISBE Bookmarklets</title>
         <style type="text/css">
-            .table { display: table; }
-            .table > div { display: table-cell; }
+            body { text-align: center; }
+            .table { display: table; vertical-align: middle; text-align: center; width: 100%; }
+            .table > div { display: table-cell; padding: 5px; width: 48%; }
+            .divider { border: 1px solid; border-style: none solid none none; width: 2%!important; }
+            h3 { padding: 0; margin: 0; }
         </style>
     </head>
-    <body style="text-align:center;">
+    <body>
         <h1>Para guardar los <span style="font-style:italic">bookmarklets</span>, pinche y arrastre cada enlace a la barra de marcadores/bookmarks</h1>
         <hr />
         <div class="table">
@@ -20,8 +23,13 @@
                     <a href='javascript:(function(){var f=window.frames;while(f.length>0){f=f.frames[0];}var doc=f.document;var cbs=doc.getElementsByTagName("select");for(var i=0;i<cbs.length;i++){cbs[i].selectedIndex=0;}})();'>[Productos] Limpiar firmas disponibles</a>
                 </h2>
             </div>
+            <div class="divider"></div>
             <div>
-                
+                <h3>Video demostrativo:</h3>
+                <video controls="true" autoplay="true" loop="true" muted="true">
+                    <source src="sisbe.mp4" type="video/mp4">
+                    Su navegador no soporta el elemento de video nativo.
+                </video>
             </div>
         </div>
 </body>
