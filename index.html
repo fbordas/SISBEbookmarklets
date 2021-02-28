@@ -7,11 +7,12 @@
             .center { text-align: center; }
             .table { display: flex; vertical-align: middle; }
             .table > div { padding: 5px; width: 45%!important; vertical-align: middle; text-align: center; }
-            h2,h3,h4,ol { padding: 0px!important; margin: 2px!important; }
+            h2,h3,h4 { padding: 0px!important; margin: 2px!important; }
             .i { font-style: italic; }
             video { border: 1px solid black; }
             .small { font-size: x-small; }
             .compact { margin: 0px!important; padding: 0px!important; }
+            ul { margin-top: 0px!important; margin-bottom: 0px; padding-top: 0px; padding-bottom: 0px; }
         </style>
         <script type="text/javascript">
             function loadVid(id)
@@ -27,6 +28,7 @@
             <h2><span class="i">Bookmarklets</span> para SISBE</h2>
             <div class="table center">
                 <div>
+                    Los siguientes <span class="i">bookmarklets</span> ser&aacute;n de utilidad para agilizar el trabajo de asignaci&oacute;n de permisos a m&oacute;dulos y productos en SISBE.<br /><br /><br />
                     <h3>
                         <a href='javascript:(function(){var f=window.frames;while(f.length>0){f=f.frames[0];}var doc=f.document;var checks=Array.from(doc.getElementsByTagName("input")).filter(function(item){return(item.getAttribute("type").toLowerCase()=="checkbox"||item.getAttribute("type").toLowerCase()=="text")&&item.getAttribute("id")!="txtRif";});for(var i=0;i<checks.length;i++){if(checks[i].getAttribute("type").toLowerCase()=="text"){checks[i].value="99999999,99";}else{checks[i].setAttribute("checked","checked");}}})();'>[Módulos] Marcar todo (cotejos y montos)</a><br /><br />
                         <a href='javascript:(function(){var f=window.frames;while(f.length>0){f=f.frames[0];}var doc=f.document;var checks=Array.from(doc.getElementsByTagName("input")).filter(function(item){return(item.getAttribute("type").toLowerCase()=="checkbox"||item.getAttribute("type").toLowerCase()=="text")&&item.getAttribute("id")!="txtRif";});for(var i=0;i<checks.length;i++){if(checks[i].getAttribute("type").toLowerCase()=="text"){checks[i].value="0,00";}else{checks[i].removeAttribute("checked");}}})();'>[Módulos] Limpiar todo (cotejos y montos)</a><br /><br />
@@ -47,7 +49,7 @@
             </div>
         </div>
         <div class="compact">
-            <h4 class="center">Notas:</h3>
+            <h4>Notas:</h4>
             <ul>
                 <li>Cada <span class="i">bookmarklet</span> s&oacute;lo funcionar&aacute; en la secci&oacute;n correspondiente de SISBE.</li>
                 <li>Los <span class="i">bookmarklets</span> han sido probados y verificados tanto en Chrome como Firefox. <span class="i">NO</span> se garantiza su funcionamiento en Internet Explorer o Microsoft Edge.</li>
