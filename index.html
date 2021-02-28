@@ -5,12 +5,20 @@
         <title>SISBE Bookmarklets</title>
         <style type="text/css">
             .center { text-align: center; }
-            .table { display: table; vertical-align: middle; }
-            .table > div { display: inline-block; padding: 5px; /*width: 48%;*/ vertical-align: middle; }
-            /*.divider { border: 1px solid; border-style: none solid none none; width: 2%!important; }*/
+            .table { display: flex; vertical-align: middle; }
+            .table > div { padding: 5px; width: 100%!important; vertical-align: middle; }
             h3 { padding: 0; margin: 0; }
             .i { font-style: italic; }
+            video { border: 1px solid black; }
+            .small { font-size: xx-small; }
         </style>
+        <script type="text/javascript">
+            function loadVid(id)
+            {
+                document.getElementById("src").src = id + ".mp4";
+                document.getElementById("vid").load();
+            }
+        </script>
     </head>
     <body>
         <div class="center">
@@ -26,9 +34,12 @@
                     </h3>
                 </div>
                 <!--<div>
-                    <h3>Video demostrativo:</h3>
-                    <video controls="true" autoplay="true" loop="true" muted="true" width="75%" height="75%">
-                        <source src="sisbe.mp4" type="video/mp4">
+                    <h3>Videos de demostraci&oacute;n:</h3>
+                    <a class="small" href="javascript:loadVid('sisbe')">Guardar en marcadores</a> | 
+                    <a class="small" href="javascript:loadVid('sisbe')">Marcar permisos y montos</a> |
+                    <a class="small" href="javascript:loadVid('sisbe')">Marcar firmas</a>
+                    <video controls="true" loop="true" muted="true" width="556" height="312" id="vid">
+                        <source src="sisbe.mp4" type="video/mp4" id="src" />
                         Su navegador no soporta el elemento de video nativo.
                     </video>
                 </div>-->
