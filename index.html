@@ -6,24 +6,25 @@
         <style type="text/css">
             .center { text-align: center; }
             .table { display: flex; vertical-align: middle; }
-            .table > div { padding: 5px; width: 100%!important; vertical-align: middle; text-align: center; }
-            h3 { padding: 0; margin: 0; }
+            .table > div { padding: 5px; width: 45%!important; vertical-align: middle; text-align: center; }
+            h2 h3 hr { padding: 0px!important; margin: 0px!important; }
             .i { font-style: italic; }
             video { border: 1px solid black; }
             .small { font-size: xx-small; }
+            .compact { margin: 0px!important; padding: 0px!important; }
         </style>
         <script type="text/javascript">
             function loadVid(id)
             {
                 document.getElementById("src").src = id + ".mp4";
                 document.getElementById("vid").load();
+                document.getElementById("vid").play();
             }
         </script>
     </head>
     <body>
         <div class="center">
             <h2><span class="i">Bookmarklets</span> para SISBE</h2>
-            <hr />
             <div class="table center">
                 <div>
                     <h3>
@@ -33,21 +34,20 @@
                         <a href='javascript:(function(){var f=window.frames;while(f.length>0){f=f.frames[0];}var doc=f.document;var cbs=doc.getElementsByTagName("select");for(var i=0;i<cbs.length;i++){cbs[i].selectedIndex=0;}})();'>[Productos] Limpiar firmas disponibles</a>
                     </h3>
                 </div>
-                <!--<div>
-                    <h3>Videos de demostraci&oacute;n:</h3>
-                    <a class="small" href="javascript:loadVid('sisbe')">Guardar en marcadores</a> | 
-                    <a class="small" href="javascript:loadVid('sisbe')">Marcar permisos y montos</a> |
-                    <a class="small" href="javascript:loadVid('sisbe')">Marcar firmas</a>
-                    <video controls="true" loop="true" muted="true" width="556" height="312" id="vid">
-                        <source src="sisbe.mp4" type="video/mp4" id="src" />
+                <div>
+                    Videos de demostraci&oacute;n:<br />
+                    <a class="small" href="javascript:loadVid('bkm')">Guardar en marcadores</a> | 
+                    <a class="small" href="javascript:loadVid('mod')">Marcar permisos y montos</a> |
+                    <a class="small" href="javascript:loadVid('prd')">Marcar firmas</a>
+                    <video controls="true" loop="true" autoplay="true" muted="true" width="556" height="312" id="vid">
+                        <source src="bkm.mp4" type="video/mp4" id="src" />
                         Su navegador no soporta el elemento de video nativo.
                     </video>
-                </div>-->
+                </div>
             </div>
         </div>
-        <br /><hr /><br />
-        <div>
-            <h3 class="center">Notas:</h3>
+        <div class="compact">
+            <h4 class="center">Notas:</h3>
             <ul>
                 <li>Cada <span class="i">bookmarklet</span> s&oacute;lo funcionar&aacute; en la secci&oacute;n correspondiente de SISBE.</li>
                 <li>En el m&oacute;dulo de firmas, se seleccionar&aacute; la primera firma disponible para cada elemento, cualquiera que sea.</li>
