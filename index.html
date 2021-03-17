@@ -17,7 +17,8 @@
             .changelog { border: 1px solid black; margin: auto; width: 80%; padding: 5px; height: 80px; overflow-y: scroll; }
             .changelog > h3 { display: inline; }
         </style>
-        <script type="text/javascript">
+        <script type="text/javascript" defer>
+            loadVid("bkm");
             function loadVid(id)
             {
                 document.getElementById("src").src = id + ".mp4";
@@ -45,6 +46,8 @@
                     <a class="small" href="javascript:loadVid('mod')">Permisos/M&oacute;dulos</a> |
                     <a class="small" href="javascript:loadVid('prd')">Firmas/Productos</a>
                     <video controls="true" loop="true" autoplay="true" muted="true" width="556" height="312" id="vid">
+                        <source src="prd.mp4" type="video/mp4" id="src" />
+                        <source src="mod.mp4" type="video/mp4" id="src" />
                         <source src="bkm.mp4" type="video/mp4" id="src" />
                         Su navegador no soporta el elemento de video nativo.
                     </video>
