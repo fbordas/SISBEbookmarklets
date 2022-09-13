@@ -58,8 +58,8 @@
                 <li>Si se intenta utilizar un <span class="i">bookmarklet</span> en la secci&oacute;n incorrecta, se mostrar&aacute; un mensaje y no se realizar&aacute;n cambios a la p&aacute;gina actual.</li>
                 <li>Los <span class="i">bookmarklets</span> han sido probados y verificados tanto en Chrome/Chromium como Firefox. <span class="i">NO</span> se garantiza su funcionamiento en Opera, Safari, Internet Explorer o Microsoft Edge.</li>
                 <li>Los <span class="i">bookmarklets</span> han sido probados y verificados en todos los ambientes (DEV, SQA, PREP).</li>
-                <li>En el m&oacute;dulo de firmas, se seleccionar&aacute; la primera firma disponible para cada elemento, cualquiera que sea.</li>
-                <li>Si alg&uacute;n m&oacute;dulo o transacci&oacute;n no tiene esquemas de firmas definidos, el <span class="i">dropdown</span> correspondiente no se ver&aacute; afectado, debido a que no tendr&aacute; elementos.</li>
+                <li>En el m&oacute;dulo de firmas, se seleccionar&aacute; la primera firma disponible para cada elemento, cualquiera que sea. Si un m&oacute;dulo s&oacute;lo tiene el tipo de firma X disponible (exclusivo de Dispersi&oacute;n de Pagos), dicho m&oacute;dulo quedar&aacute; sin firma configurada.</li>
+                <li>Si alg&uacute;n m&oacute;dulo o transacci&oacute;n no tiene esquemas de firmas definidos, el <span class="i">combobox/dropdown</span> correspondiente no se ver&aacute; afectado, debido a que no tendr&aacute; elementos.</li>
                 <li>Si se cambia manualmente un cotejo o una firma antes de usar el <span class="i">bookmarklet</span>, el mismo no tendr&aacute; acceso a ese elemento hasta volver a cargar la p&aacute;gina.</li>
                 <li>Para cualesquiera informaciones o instrucciones adicionales, favor contactar a <a href="mailto:fernando_bordas@bhdleon.com.do?subject=Bookmarklets%20SISBE&body=Tengo%20una%20pregunta%20o%20solicitud%20sobre%20los%20bookmarklets%20de%20SISBE.">fernando_bordas@bhdleon.com.do</a>.</li>
             </ul>
@@ -68,6 +68,7 @@
         <div class="changelog">
             <h3>Changelog:</h3> (Cambios m&aacute;s recientes se muestran al inicio.)
             <ul>
+                <li><span class="i">2022/09/12:</span> Funcionalidad de "Marcar firmas disponibles" actualizada para <span class="i">NO</span> utilizar el tipo de firma X (exclusivo de Dispersi&oacute;n de Pagos) en caso de que sea el &uacute;nico tipo de firma disponible para el m&oacute;dulo.</li>
                 <li><span class="i">2021/04/19:</span> Actualizaci&oacute;n para que los <span class="i">bookmarklets</span> no hagan modificaciones y muestren un mensaje de error si se utilizan en la pantalla equivocada.</li>
                 <li><span class="i">2021/03/03:</span> Versi&oacute;n, lanzamiento y demostraci&oacute;n inicial.</li>
             </ul>
